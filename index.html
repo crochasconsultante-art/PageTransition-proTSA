@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formation : L'autonomie professionnelle pour l'insertion durable des experts avec TSA - 4 et 11 juin 2026 en distanciel">
+    <title>Formation Autonomie Professionnelle TSA | Claire Rochas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --noir: #1E1C11;
+            --gris: #797979;
+            --orange: #DD5F00;
+            --gris-clair: #DDDDDD;
+            --gris-fonce: #A7A7A7;
+            --blanc: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--noir);
+            background-color: var(--blanc);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        /* Accessibilité : Skip to content */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--orange);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--blanc) 0%, #f8f8f8 100%);
+            padding: 60px 20px 80px;
+            border-bottom: 4px solid var(--orange);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(221, 95, 0, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 40px;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: var(--gris);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .header-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--orange);
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .header-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .info-badge {
+            background: var(--blanc);
+            border: 2px solid var(--gris-clair);
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .info-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(221, 95, 0, 0.15);
+        }
+        
+        .info-badge strong {
+            color: var(--orange);
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 80px;
+        }
+        
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--gris);
+            margin-bottom: 30px;
+            text-align: left;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--orange);
+        }
+        
+        h3 {
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            font-weight: 600;
+            color: var(--orange);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--noir);
+        }
+        
+        /* Vue d'ensemble - Timeline */
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+        
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 60px;
+            top: 60px;
+            width: 2px;
+            height: calc(100% + 50px);
+            background: var(--gris-clair);
+            z-index: 0;
+        }
+        
+        .timeline-item:last-child::before {
+            display: none;
+        }
+        
+        .timeline-number {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--orange) 0%, #ff7a2e 100%);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(221, 95, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .timeline-number small {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .timeline-content {
+            background: var(--blanc);
+            border: 2px solid var(--gris-clair);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 20px rgba(221, 95, 0, 0.1);
+        }
+        
+        .timeline-content h4 {
+            font-size: 1.4rem;
+            color: var(--orange);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content .duration {
+            font-size: 0.95rem;
+            color: var(--gris-fonce);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: #f5f5f5;
+            padding: 5px 12px;
+            border-radius: 4px;
+        }
+        
+        .timeline-content ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        
+        .timeline-content li {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 8px;
+            color: var(--noir);
+        }
+        
+        /* Accordéon programme détaillé */
+        .accordion {
+            border: 2px solid var(--gris-clair);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .accordion-item {
+            border-bottom: 1px solid var(--gris-clair);
+        }
+        
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+        
+        .accordion-header {
+            background: linear-gradient(to right, #f9f9f9, var(--blanc));
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .accordion-header:hover {
+            background: linear-gradient(to right, #f0f0f0, #f9f9f9);
+        }
+        
+        .accordion-header:focus {
+            outline: 3px solid var(--orange);
+            outline-offset: -3px;
+        }
+        
+        .accordion-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gris);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .accordion-icon {
+            font-size: 1.8rem;
+            color: var(--orange);
+            transition: transform 0.3s ease;
+            font-weight: 800;
+        }
+        
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        
+        .accordion-content-inner {
+            padding: 30px;
+            background: var(--blanc);
+        }
+        
+        .sequence-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .sequence-card {
+            background: #f9f9f9;
+            border-left: 4px solid var(--orange);
+            padding: 20px;
+            border-radius: 6px;
+        }
+        
+        .sequence-card h5 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--noir);
+            margin-bottom: 10px;
+        }
+        
+        .sequence-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .sequence-meta span {
+            font-size: 0.9rem;
+            color: var(--gris-fonce);
+            font-weight: 600;
+            background: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+        
+        .sequence-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        
+        /* Liste objectifs pédagogiques */
+        .objectives-list {
+            display: grid;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .objective-item {
+            background: linear-gradient(135deg, #f9f9f9 0%, var(--blanc) 100%);
+            border-left: 4px solid var(--orange);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .objective-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(221, 95, 0, 0.1);
+        }
+        
+        .objective-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: var(--orange);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: 700;
+            margin-right: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .objective-item p {
+            display: inline;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Section public cible */
+        .public-info {
+            background: linear-gradient(135deg, #f5f5f5 0%, var(--blanc) 100%);
+            border: 2px solid var(--gris-clair);
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 30px;
+        }
+        
+        .public-info h4 {
+            font-size: 1.3rem;
+            color: var(--orange);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .public-info ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .public-info li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .public-info li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--orange);
+            font-weight: 800;
+            font-size: 1.3rem;
+        }
+        
+        /* Boutons de téléchargement */
+        .download-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: linear-gradient(135deg, var(--orange) 0%, #ff7a2e 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(221, 95, 0, 0.3);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(221, 95, 0, 0.4);
+        }
+        
+        .download-btn:focus {
+            outline: 3px solid var(--noir);
+            outline-offset: 3px;
+        }
+        
+        .download-icon {
+            font-size: 2rem;
+        }
+        
+        /* Section accessibilité et handicap */
+        .accessibility-section {
+            background: linear-gradient(135deg, #f9f9f9 0%, var(--blanc) 100%);
+            border: 2px solid var(--gris-clair);
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 40px;
+        }
+        
+        .accessibility-section h3 {
+            color: var(--orange);
+            margin-bottom: 25px;
+        }
+        
+        .accessibility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .accessibility-card {
+            background: white;
+            border-left: 4px solid var(--orange);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .accessibility-card h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--noir);
+            margin-bottom: 15px;
+        }
+        
+        .accessibility-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .accessibility-card strong {
+            color: var(--orange);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--noir) 0%, #3a3830 100%);
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 80px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--orange);
+            margin-bottom: 20px;
+        }
+        
+        .footer-section p, .footer-section a {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: var(--orange);
+            text-decoration: underline;
+        }
+        
+        .footer-section a:focus {
+            outline: 2px solid var(--orange);
+            outline-offset: 2px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        
+        .contact-icon {
+            font-size: 1.2rem;
+            color: var(--orange);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .timeline-item {
+                grid-template-columns: 80px 1fr;
+                gap: 20px;
+            }
+            
+            .timeline-number {
+                width: 80px;
+                height: 80px;
+                font-size: 1.5rem;
+            }
+            
+            .timeline-item::before {
+                left: 40px;
+            }
+            
+            .timeline-content {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .header-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .accordion-title {
+                font-size: 1.1rem;
+            }
+            
+            .download-section {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animation d'entrée */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        /* Print styles */
+        @media print {
+            header::before,
+            .download-btn,
+            .accordion-icon {
+                display: none;
+            }
+            
+            .accordion-content {
+                max-height: none !important;
+            }
+            
+            body {
+                font-size: 12pt;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <header role="banner">
+        <div class="header-container">
+            <img src="logoseul2.png" alt="Claire Rochas - Accompagner, Former & Créer" class="logo">
+            
+            <h1>L'autonomie professionnelle pour l'insertion durable des experts avec TSA</h1>
+            
+            <p class="header-subtitle">Une formation structurante pour transformer l'expertise en activité professionnelle soutenable</p>
+            
+            <div class="header-info">
+                <div class="info-badge">
+                    <strong>📅 Dates</strong>
+                    4 et 11 juin 2026
+                </div>
+                <div class="info-badge">
+                    <strong>🖥️ Format</strong>
+                    Formation 100% distancielle
+                </div>
+                <div class="info-badge">
+                    <strong>⏱️ Durée</strong>
+                    7 heures (2 ateliers de 3h + modules asynchrones)
+                </div>
+                <div class="info-badge">
+                    <strong>👥 Public</strong>
+                    Adultes TSA, niveau cadre/expert
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main-content" class="container">
+        <!-- Section Objectifs Pédagogiques -->
+        <section aria-labelledby="objectifs-heading">
+            <h2 id="objectifs-heading">Objectifs pédagogiques</h2>
+            <p>À l'issue de la formation, le participant sera capable de :</p>
+            
+            <div class="objectives-list">
+                <div class="objective-item">
+                    <span class="objective-number" aria-hidden="true">1</span>
+                    <p><strong>Analyser son propre fonctionnement cognitif et énergétique</strong> afin d'identifier les conditions de travail soutenables et les situations à risque</p>
+                </div>
+                
+                <div class="objective-item">
+                    <span class="objective-number" aria-hidden="true">2</span>
+                    <p><strong>Distinguer et hiérarchiser les activités</strong> à forte valeur ajoutée de celles à faible valeur dans une activité de prestation intellectuelle</p>
+                </div>
+                
+                <div class="objective-item">
+                    <span class="objective-number" aria-hidden="true">3</span>
+                    <p><strong>Traduire une expertise technique en offres de service</strong> compréhensibles, contractualisables et vendables sur un marché donné</p>
+                </div>
+                
+                <div class="objective-item">
+                    <span class="objective-number" aria-hidden="true">4</span>
+                    <p><strong>Structurer un cadre d'intervention clair</strong> (rôles, périmètre, livrables, temporalité) pour réduire l'incertitude relationnelle</p>
+                </div>
+                
+                <div class="objective-item">
+                    <span class="objective-number" aria-hidden="true">5</span>
+                    <p><strong>Appliquer des règles décisionnelles simples</strong> pour prioriser, choisir et renoncer sans surcharge cognitive</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Public cible -->
+        <section aria-labelledby="public-heading">
+            <h2 id="public-heading">À qui s'adresse cette formation ?</h2>
+            
+            <div class="public-info">
+                <h4>Public cible</h4>
+                <p>Cette formation s'adresse aux <strong>adultes avec TSA (Trouble du Spectre de l'Autisme) de niveau verbal, profil cadre ou expert</strong>, en situation de :</p>
+                <ul>
+                    <li>Demande d'emploi</li>
+                    <li>Transition professionnelle</li>
+                    <li>Maintien fragile en poste</li>
+                </ul>
+                <p style="margin-top: 20px;">Le parcours professionnel est généralement marqué par des <strong>compétences élevées</strong> mais des <strong>ruptures répétées</strong> et des incompréhensions relationnelles.</p>
+            </div>
+            
+            <div class="public-info" style="margin-top: 30px;">
+                <h4>Prérequis</h4>
+                <ul>
+                    <li>Être adulte avec TSA sans trouble de la verbalisation</li>
+                    <li>Disposer de compétences professionnelles de niveau cadre ou expert</li>
+                    <li>Être en recherche d'insertion professionnelle durable ou en transition de carrière</li>
+                    <li>Avoir accès à un équipement informatique avec connexion internet pour les modules distanciels</li>
+                    <li>Expérience professionnelle préalable dans un domaine d'expertise</li>
+                    <li>Capacité à travailler en autonomie sur support numérique</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Section Vue d'ensemble -->
+        <section aria-labelledby="vue-ensemble-heading">
+            <h2 id="vue-ensemble-heading">Vue d'ensemble du parcours</h2>
+            <p>La formation se déroule en 3 temps complémentaires pour garantir une progression structurée et une autonomie guidée :</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">
+                        <div>
+                            <small>Avant</small>
+                            <div>30min</div>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Micro-parcours asynchrone : Préparation</h4>
+                        <span class="duration">30 minutes - À votre rythme</span>
+                        <p><strong>Objectif :</strong> Pré-structuration cognitive pour réduire la charge cognitive le jour J</p>
+                        <ul>
+                            <li>Capsule 1 : Identifier son fonctionnement cognitif et énergétique (7 min)</li>
+                            <li>Capsule 2 : Distinguer zones de confort et zones à risque professionnel (7 min)</li>
+                            <li>Quiz décisionnel de positionnement</li>
+                            <li>Supports accessibles : police adaptée, contrastes WCAG, navigation clavier</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">
+                        <div>
+                            <small>Jour 1</small>
+                            <div>3h</div>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Atelier synchrone 1 : Analyser & Hiérarchiser</h4>
+                        <span class="duration">3 heures - 9h00 à 12h00</span>
+                        <p><strong>Objectif :</strong> Objectiver son fonctionnement de travail et identifier la valeur réelle produite</p>
+                        <ul>
+                            <li>Introduction & cadre sécurisant (explicitation des règles)</li>
+                            <li>Icebreaker cognitif silencieux (travail individuel)</li>
+                            <li>Comprendre son fonctionnement soutenable</li>
+                            <li>Distinguer valeur ajoutée et dispersion</li>
+                            <li>Évaluation écrite individuelle</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">
+                        <div>
+                            <small>Jour 2</small>
+                            <div>3h</div>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Atelier synchrone 2 : Structurer & Décider</h4>
+                        <span class="duration">3 heures - 9h00 à 12h00</span>
+                        <p><strong>Objectif :</strong> Structurer une activité de consulting contractualisable et prévisible</p>
+                        <ul>
+                            <li>Réactivation des acquis du jour 1</li>
+                            <li>Traduire son expertise en offre de service vendable</li>
+                            <li>Définir un cadre d'intervention explicite</li>
+                            <li>Appliquer des règles décisionnelles sans surcharge</li>
+                            <li>Évaluation finale et engagement personnel</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">
+                        <div>
+                            <small>Après</small>
+                            <div>30min</div>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Micro-parcours asynchrone : Ancrage</h4>
+                        <span class="duration">30 minutes - À votre rythme</span>
+                        <p><strong>Objectif :</strong> Sécuriser le transfert des apprentissages sans accompagnement déguisé</p>
+                        <ul>
+                            <li>Capsule 3 : Consolider les outils décisionnels (7 min)</li>
+                            <li>Capsule 4 : Anticiper les points de friction relationnels (7 min)</li>
+                            <li>Quiz d'ancrage et plan d'action personnel</li>
+                            <li>Accès permanent aux ressources pédagogiques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Programme détaillé -->
+        <section aria-labelledby="programme-heading">
+            <h2 id="programme-heading">Programme détaillé</h2>
+            <p>Découvrez le déroulé précis de chaque atelier synchrone avec les séquences, méthodes et modalités pédagogiques.</p>
+            
+            <div class="accordion" role="tablist" aria-label="Programme détaillé de la formation">
+                <!-- Atelier 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" 
+                            role="tab" 
+                            aria-expanded="false" 
+                            aria-controls="atelier1-content"
+                            id="atelier1-header">
+                        <span class="accordion-title">
+                            <span aria-hidden="true">📘</span>
+                            Atelier 1 : Analyser & Hiérarchiser (3h)
+                        </span>
+                        <span class="accordion-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-content" 
+                         role="tabpanel" 
+                         id="atelier1-content" 
+                         aria-labelledby="atelier1-header">
+                        <div class="accordion-content-inner">
+                            <p><strong>Horaires :</strong> 9h00 à 12h00<br>
+                            <strong>Objectif macro :</strong> Analyser son fonctionnement et identifier la valeur réelle produite</p>
+                            
+                            <div class="sequence-grid">
+                                <div class="sequence-card">
+                                    <h5>Séquence 1 : Introduction & cadre</h5>
+                                    <div class="sequence-meta">
+                                        <span>⏱️ 20 min</span>
+                                        <span>🕐 9h00 - 9h20</span>
+                                    </div>
+                                    <p><strong>Objectif :</strong> Sécuriser le cadre relationnel</p>
+                                    <p><strong>Méthode :</strong> Présentation écrite commentée, explicitation des règles de fonctionnement de l'atelier</p>
+                                    <p><strong>Accessibilité :</strong> Rythme adapté, caméra off possible</p>
+                                </div>
+                                
+                                <div class="sequence-card">
+                                    <h5>Séquence 2 : Icebreaker cognitif silencieux</h5>
+                                    <div class="sequence-meta">
+                                        <span>⏱️ 15 min</span>
+                                        <span>🕐 9h20 - 9h35</span>
+                                    </div>
+                                    <p><strong>Objectif :</strong> Identifier ses zones de confort et d'inconfort professionnel</p>
+                                    <p><strong>Méthode :</strong> Travail individuel guidé</p>
+                                    <p><strong>Accessibilité :</strong> Sans exposition collective, zéro interaction imposée</p>
+                                </div>
+                                
+                                <div class="sequence-card">
+                                    <h5>Séquence 3 : Fonctionnement soutenable</h5>
+                                    <div class="sequence-meta">
+                                        <span>⏱️ 55 min</span>
+                                        <span>🕐 9h35 - 10h30</span>
+                                    </div>
+                                    <p><strong>Objectif :</strong> Analyser son fonctionnement cognitif et énergétique</p>
+                                    <p><strong>Méthode :</strong> Apport théorique sur les conditions de soutenabilité du travail pour les profils experts avec TSA, utilisation d'une grille d'analyse structurée</p>
+                                    <p><strong>Modalité :</strong> Temps long dédié à l'écrit individuel pour identifier 5 conditions soutenables et 3 situations à risque</p>
+                                </div>
+                                
+                                <div class="sequence-card" style="background: #fffaf0; border-left-color: var(--gris-fonce);">
+                                    <h5>⏸️ Pause</h5>
+                                    <div class="sequence-meta">
+                                        <span>⏱️ 20 min</span>
+                                        <span>🕐 10h30 - 10h50</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="sequence-card">
+                                    <h5>Séquence 4 : Valeur ajoutée vs dispersion</h5>
+                                    <div class="sequence-meta">
+                                        <span>⏱️ 55 min</span>
+                                        <span>🕐 10h50 - 11h45</span>
+                                    </div>
+                                    <p><strong>Objectif :</strong> Hiérarchiser ses activités en 3 niveaux de valeur</p>
+                                    <p><strong>Méthode :</strong> Apport méthodologique sur la distinction entre activités à forte et faible valeur ajoutée, travail sur matrice décisionnelle</p>
+                                    <p><strong>Modalité :</strong> Application à sa propre expertise avec support contrasté</p>
+                                </div>
+                                
+                                <div class="sequence-card">
+                                    <h5>Séquence 5 : Conclusion Atelier 1</h5>
+                                    <div class="sequence-meta">
+                                        <span>⏱️ 15 min</span>
+                                        <span>🕐 11h45 - 12h00</span>
+                                    </div>
+                                    <p><strong>Objectif :</strong> Évaluer et identifier un apprentissage clé</p>
+                                    <p><strong>Méthode :</strong> Évaluation écrite individuelle, formalisation des apprentissages et du "petit pas" à réaliser</p>
+                                    <p><strong>Accessibilité :</strong> Aucune restitution orale imposée, expression écrite privilégiée</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Atelier 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" 
+                            role="tab" 
+                            aria-expanded="false" 
+                            aria-controls="atelier2-content"
+                            id="atelier2-header">
+                        <span class="accordion-title">
+                            <span aria-hidden="true">📗</span>
+                            Atelier 2 : Structurer & Décider (3h)
+                        </span>
+                        <span class="accordion-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-content" 
+                         role="tabpanel" 
+                         id="atelier2-content" 
+                         aria-labelledby="atelier2-header">
+                        <div class="accordion-content-inner">
+                            <p><strong>Horaires :</strong> 9h00 à 12h00<br>
+                            <strong>Objectif macro :</strong> Structurer une activité de consulting contractualisable et prévisible</p>
+                            
+                            <div class="sequence-grid">
+                                <div class="sequence-card">
+                                    <h5>Séquence 6 : Réactivation des acquis</h5>
+                                    <div class="sequence-meta">
+                                        <span>⏱️ 15 min</span>
+                                        <span>🕐 9h00 - 9h15</span>
+                                    </div>
+                                    <p><strong>Objectif :</strong> Ancrer les acquis du jour 1</p>
+                                    <p><strong>Méthode :</strong> Synthèse écrite des apprentissages de l'Atelier 1, consolidation individuelle sécurisante</p>
+                                    <p><strong>Accessibilité :</strong> Rythme lent, pas de pression temporelle</p>
+                                </div>
+                                
+                                <div class="sequence-card">
+                                    <h5>Séquence 7 : De l'expertise à l'offre</h5>
+                                    <div class="sequence-meta">
+                                        <span>⏱️ 55 min</span>
+                                        <span>🕐 9h15 - 10h10</span>
+                                    </div>
+                                    <p><strong>Objectif :</strong> Traduire une compétence technique en offre de service contractualisable</p>
+                                    <p><strong>Méthode :</strong> Apport méthodologique, utilisation d'un canevas pas-à-pas structurant</p>
+                                    <p><strong>Modalité :</strong> Support contrasté, modèle reproductible pour formaliser 1 offre de consulting compréhensible et vendable</p>
+                                </div>
+                                
+                                <div class="sequence-card" style="background: #fffaf0; border-left-color: var(--gris-fonce);">
+                                    <h5>⏸️ Pause</h5>
+                                    <div class="sequence-meta">
+                                        <span>⏱️ 20 min</span>
+                                        <span>🕐 10h10 - 10h30</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="sequence-card">
+                                    <h5>Séquence 8 : Cadre d'intervention explicite</h5>
+                                    <div class="sequence-meta">
+                                        <span>⏱️ 50 min</span>
+                                        <span>🕐 10h30 - 11h20</span>
+                                    </div>
+                                    <p><strong>Objectif :</strong> Définir un cadre d'intervention écrit et explicite</p>
+                                    <p><strong>Méthode :</strong> Étude de cas écrite (pas de jeu de rôle), structuration des rôles, périmètres, livrables et temporalité</p>
+                                    <p><strong>Modalité :</strong> Réduction des implicites relationnels par l'écrit</p>
+                                </div>
+                                
+                                <div class="sequence-card">
+                                    <h5>Séquence 9 : Décider sans surcharge</h5>
+                                    <div class="sequence-meta">
+                                        <span>⏱️ 30 min</span>
+                                        <span>🕐 11h20 - 11h50</span>
+                                    </div>
+                                    <p><strong>Objectif :</strong> Appliquer 1 règle décisionnelle reproductible</p>
+                                    <p><strong>Méthode :</strong> Apport pratique sur les règles décisionnelles de type "si/alors", outil reproductible pour prioriser, choisir, renoncer</p>
+                                    <p><strong>Modalité :</strong> Application à des situations concrètes, réduction de la charge cognitive</p>
+                                </div>
+                                
+                                <div class="sequence-card">
+                                    <h5>Séquence 10 : Conclusion Atelier 2</h5>
+                                    <div class="sequence-meta">
+                                        <span>⏱️ 10 min</span>
+                                        <span>🕐 11h50 - 12h00</span>
+                                    </div>
+                                    <p><strong>Objectif :</strong> Évaluation et engagement sur le transfert des compétences</p>
+                                    <p><strong>Méthode :</strong> Évaluation finale écrite individuelle, engagement sur le transfert des compétences</p>
+                                    <p><strong>Accessibilité :</strong> Caméra off possible, sécurisant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modalités pédagogiques -->
+                <div class="accordion-item">
+                    <button class="accordion-header" 
+                            role="tab" 
+                            aria-expanded="false" 
+                            aria-controls="modalites-content"
+                            id="modalites-header">
+                        <span class="accordion-title">
+                            <span aria-hidden="true">🎯</span>
+                            Modalités pédagogiques & évaluation
+                        </span>
+                        <span class="accordion-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-content" 
+                         role="tabpanel" 
+                         id="modalites-content" 
+                         aria-labelledby="modalites-header">
+                        <div class="accordion-content-inner">
+                            <h3>Approche pédagogique</h3>
+                            <p>Les modalités pédagogiques s'appuient sur une <strong>ingénierie de clarification du travail réel</strong>, adaptée aux profils experts avec TSA. L'approche privilégie :</p>
+                            
+                            <div class="sequence-grid">
+                                <div class="sequence-card">
+                                    <h5>Autonomie encadrée</h5>
+                                    <p>Structuration forte sans infantilisation, avec repères décisionnels clairs</p>
+                                </div>
+                                
+                                <div class="sequence-card">
+                                    <h5>Individualisation</h5>
+                                    <p>Travail individuel guidé comme modalité principale, collectif très restreint (4 à 6 participants maximum) et optionnel</p>
+                                </div>
+                                
+                                <div class="sequence-card">
+                                    <h5>Explicitation</h5>
+                                    <p>Consignes écrites détaillées, objectifs affichés, aucun implicite relationnel</p>
+                                </div>
+                                
+                                <div class="sequence-card">
+                                    <h5>Prévisibilité</h5>
+                                    <p>Agenda communiqué à l'avance, séquences courtes, pauses respectées</p>
+                                </div>
+                                
+                                <div class="sequence-card">
+                                    <h5>Réduction de la charge cognitive</h5>
+                                    <p>Supports contrastés, temps long, absence d'exposition sociale forcée</p>
+                                </div>
+                                
+                                <div class="sequence-card">
+                                    <h5>Ancrage par l'écrit</h5>
+                                    <p>Évaluations écrites, pas de mises en situation émotionnelles ni de jeux de rôle</p>
+                                </div>
+                            </div>
+                            
+                            <h3 style="margin-top: 40px;">Modalités d'évaluation</h3>
+                            <p>Les évaluations sont réalisées en <strong>format écrit</strong>, sans exposition orale ni mise en situation sociale :</p>
+                            <ul style="margin-left: 20px; margin-top: 20px;">
+                                <li>Auto-diagnostic individuel écrit sur le fonctionnement cognitif et énergétique (identification de 5 conditions soutenables et 3 risques)</li>
+                                <li>Exercice de hiérarchisation des activités en 3 niveaux de valeur ajoutée (matrice décisionnelle)</li>
+                                <li>Production d'une offre de consulting contractualisable à partir d'un canevas guidé</li>
+                                <li>Étude de cas écrite pour structurer un cadre d'intervention explicite</li>
+                                <li>Quiz décisionnel pour application de règles reproductibles</li>
+                            </ul>
+                            
+                            <h3 style="margin-top: 40px;">Supports pédagogiques</h3>
+                            <p>Les supports (grilles d'analyse, matrices décisionnelles, canevas, outils "si/alors") sont <strong>structurants, reproductibles</strong> et transmis aux participants à l'issue de la formation pour un <strong>transfert durable</strong> en situation professionnelle.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modalités techniques -->
+                <div class="accordion-item">
+                    <button class="accordion-header" 
+                            role="tab" 
+                            aria-expanded="false" 
+                            aria-controls="techniques-content"
+                            id="techniques-header">
+                        <span class="accordion-title">
+                            <span aria-hidden="true">💻</span>
+                            Modalités techniques
+                        </span>
+                        <span class="accordion-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-content" 
+                         role="tabpanel" 
+                         id="techniques-content" 
+                         aria-labelledby="techniques-header">
+                        <div class="accordion-content-inner">
+                            <h3>Format distanciel</h3>
+                            <ul style="margin-left: 20px; margin-top: 20px;">
+                                <li>Plateforme de visioconférence sécurisée (Zoom ou Teams) pour les ateliers synchrones</li>
+                                <li>Plateforme e-learning accessible 24/7 pour les modules asynchrones</li>
+                                <li>Assistance technique par courriel et chat (réponse sous 24h maximum en jours ouvrés)</li>
+                                <li>Support pédagogique téléchargeable transmis à l'issue de chaque atelier</li>
+                                <li>Le lien de connexion est envoyé par courriel 48h avant le démarrage de la formation</li>
+                            </ul>
+                            
+                            <h3 style="margin-top: 40px;">Accessibilité numérique</h3>
+                            <ul style="margin-left: 20px; margin-top: 20px;">
+                                <li>Interface compatible lecteur d'écran et navigation clavier</li>
+                                <li>Polices adaptées dyslexie, contrastes respectant les normes WCAG</li>
+                                <li>Possibilité de participation caméra off et interaction écrite privilégiée</li>
+                                <li>Consignes explicites, agenda communiqué à l'avance</li>
+                            </ul>
+                            
+                            <h3 style="margin-top: 40px;">Informations pratiques</h3>
+                            <ul style="margin-left: 20px; margin-top: 20px;">
+                                <li><strong>Délai d'accès :</strong> Variable selon la demande. Une réponse est apportée sous 1 semaine.</li>
+                                <li><strong>Tarif :</strong> Sur devis</li>
+                                <li><strong>Inscription :</strong> Auprès du client donneur d'ordre</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Téléchargements -->
+        <section aria-labelledby="telechargements-heading">
+            <h2 id="telechargements-heading">Documents à télécharger</h2>
+            <p>Consultez le programme complet et le livret stagiaire pour découvrir tous les détails de la formation.</p>
+            
+            <div class="download-section">
+                <a href="programme_autonomie_TSAV2.pdf" class="download-btn" download aria-label="Télécharger le programme complet de la formation en PDF">
+                    <span class="download-icon" aria-hidden="true">📄</span>
+                    <div>
+                        <div>Programme complet</div>
+                        <div style="font-size: 0.85rem; font-weight: 400; margin-top: 5px;">PDF détaillé</div>
+                    </div>
+                </a>
+                
+                <a href="Livret_Stagiaire___Autonomie_Professionnelle__se_quence_3_.pdf" class="download-btn" download aria-label="Télécharger le livret stagiaire en PDF">
+                    <span class="download-icon" aria-hidden="true">📋</span>
+                    <div>
+                        <div>Livret stagiaire</div>
+                        <div style="font-size: 0.85rem; font-weight: 400; margin-top: 5px;">Support pédagogique</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Section Accessibilité et inclusion -->
+        <section aria-labelledby="accessibilite-heading">
+            <div class="accessibility-section">
+                <h3 id="accessibilite-heading">Accessibilité et gestion du handicap</h3>
+                <p>Claire Rochas s'engage à garantir l'accessibilité de ses formations à tous les publics et à accompagner chaque participant dans les meilleures conditions possibles.</p>
+                
+                <div class="accessibility-grid">
+                    <div class="accessibility-card">
+                        <h4>🤝 Accessibilité aux personnes en situation de handicap</h4>
+                        <p>Cette formation est accessible aux personnes en situation de handicap. Les modalités pédagogiques ont été spécifiquement conçues pour les profils neuroatypiques avec TSA, avec une attention particulière portée à l'accessibilité cognitive, sensorielle et relationnelle.</p>
+                    </div>
+                    
+                    <div class="accessibility-card">
+                        <h4>👤 Référent handicap</h4>
+                        <p>Pour toute question relative à l'accessibilité ou pour discuter d'aménagements spécifiques, vous pouvez contacter <strong>Claire Moutot, référente handicap</strong>, qui étudiera avec vous les adaptations nécessaires.</p>
+                        <p style="margin-top: 15px;"><strong>Contact :</strong> claire.moutot@itg.fr | 01 58 18 39 66</p>
+                    </div>
+                    
+                    <div class="accessibility-card">
+                        <h4>🔧 Aménagements possibles</h4>
+                        <p>Selon les besoins identifiés, des aménagements peuvent être mis en place : supports adaptés, temps supplémentaires, modalités d'interaction ajustées, assistance technique renforcée, ou toute autre adaptation nécessaire à la réussite de votre parcours.</p>
+                    </div>
+                    
+                    <div class="accessibility-card">
+                        <h4>📞 Nous contacter</h4>
+                        <p>N'hésitez pas à nous faire part de vos besoins <strong>dès votre inscription</strong> ou <strong>au plus tard 2 semaines avant le début de la formation</strong> afin que nous puissions mettre en place les adaptations nécessaires dans les meilleures conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <div class="contact-item">
+                    <span class="contact-icon" aria-hidden="true">👤</span>
+                    <span><strong>Claire Rochas</strong><br>Consultante formatrice</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon" aria-hidden="true">✉️</span>
+                    <a href="mailto:claire.rochas@orange.fr">claire.rochas@orange.fr</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon" aria-hidden="true">📞</span>
+                    <a href="tel:+33660276768">06 60 27 67 68</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon" aria-hidden="true">🔗</span>
+                    <a href="https://www.linkedin.com/in/clairerochas" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Organisme de formation</h4>
+                <p><strong>MISSIONEO</strong><br>
+                SAS au capital 12 198 510,00 €<br>
+                SIRET 489 527 275 00031<br>
+                APE 8299Z<br>
+                NDA : 11756845775</p>
+                <p style="margin-top: 15px;">34 rue Laffitte<br>75009 Paris<br>
+                Tél. : +33 (0) 1 44 69 80 40</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>À propos</h4>
+                <p>Consultante formatrice freelance, Claire accompagne des personnes en individuel et collectif vers l'autonomie professionnelle. Elle dispose d'une expertise solide en communication et en nouvelles formes d'emploi (portage salarial, couveuses, CAE).</p>
+                <p style="margin-top: 15px;"><strong>L'écoute active, l'adaptation et la bienveillance sont essentielles dans mon métier.</strong></p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Claire Rochas - Tous droits réservés | Formation conçue avec soin pour favoriser l'insertion durable des experts avec TSA</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Gestion de l'accordéon avec accessibilité
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionItem = button.parentElement;
+                const accordionContent = accordionItem.querySelector('.accordion-content');
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                
+                // Fermer tous les autres accordéons
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    if (item !== accordionItem) {
+                        item.classList.remove('active');
+                        item.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+                        item.querySelector('.accordion-content').style.maxHeight = null;
+                    }
+                });
+                
+                // Toggle l'accordéon cliqué
+                if (isExpanded) {
+                    accordionItem.classList.remove('active');
+                    button.setAttribute('aria-expanded', 'false');
+                    accordionContent.style.maxHeight = null;
+                } else {
+                    accordionItem.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                }
+            });
+            
+            // Gestion clavier
+            button.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    button.click();
+                }
+            });
+        });
+        
+        // Animation au scroll (optionnel)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section, .timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
